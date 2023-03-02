@@ -27,4 +27,4 @@ Version: 1.1
 2. Import <span style="color:limegreen">IP_Username_Manager</span> into your script using <span style="color:aqua">from IP_Username_Manager import *</span>
 3. Call a function
 
-Code examples are in the <span style="color:limegreen">example.py</span> script
+Code examples are in the ```example.py``` script
