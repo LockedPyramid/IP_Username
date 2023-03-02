@@ -2,9 +2,11 @@
 
 Create a username with a python script.
 
-Version: 1.1
+Version: 1.2
 
 ## Updates
+
+- 1.2:: Added the ability to use internal Ip addresses and the ability to use inputted Ip addresses
 
 - 1.1:: Added the ability to turn off debugging - Initial release.
 
