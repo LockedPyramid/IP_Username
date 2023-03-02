@@ -3,11 +3,16 @@ from IP_Username_Manager import * #Call the script
 # Debugging note: Debugging default is set to false
 
 # Generate external username
-print(IpUnCreate(True)) # Prints the username and sets debugging to true
-print(IpUnCreate()) # Prints the username and sets debugging to false
+print(IpUnCreateExternal(True)) # Prints the username generated and sets debugging to true
+print(IpUnCreateExternal()) # Prints the username generated without debugging
 
 print("---") #Print a visual separator 
 
+#Generate internal username
+print(IpUnCreateInternal(True)) # Prints the username generated and sets debugging to true
+print(IpUnCreateInternal()) # Prints the username generated without debugging
+
+print("---") #Print a visual separator 
 
 # Decode username
 Username = "a-made-body-knew" # Sets username variable

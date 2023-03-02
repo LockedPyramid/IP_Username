@@ -14,17 +14,18 @@ Version: 1.1
 
 ## Planned Updates
 
-- 1.1:: Generate internal usernames. (ETA: 8/3/2023:DMY)
+- None
 
 ## Required Libraries
 
 - Colorama
 - Requests
+- Socket
 
 ## How to use
 
 1. Copy ```IP_Username_Manager``` into your project folder
-2. Import ```IP_Username_Manager``` into your script using from ```IP_Username_Manager import *```
+2. Import ```IP_Username_Manager``` into your script using ```from IP_Username_Manager import *```
 3. Call a function
 
 Code examples are in the ```example.py``` script

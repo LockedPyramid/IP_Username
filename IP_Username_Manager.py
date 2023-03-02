@@ -1,5 +1,6 @@
 ## Create a 4 word username identifier based off of the external ip address using the Ipify api
 from requests import get
+import socket
 from colorama import Fore, Back, Style
 
 #Library to create username
@@ -1007,7 +1008,7 @@ NameLibrary = {
 }
 
 # Function to create username based off of external IP
-def IpUnCreate(Debug:bool = False):
+def IpUnCreateExternal(Debug:bool = False):
     """_summary_
         Creates username based off of public ip address. 
         Example output: 'bat-car-fan-wow'
@@ -1021,7 +1022,7 @@ def IpUnCreate(Debug:bool = False):
     Returns:
         _type_: _description_
     """
-    
+    if Debug: print("IpUnCreateExternal - Active")
     if Debug: print("Debugging active")
 
     if Debug : print("Getting ip info...")
@@ -1051,6 +1052,44 @@ def IpUnCreate(Debug:bool = False):
     
     _IpUn = "{}-{}-{}-{}".format(_V1, _V2, _V3, _V4)
     return _IpUn
+
+def IpUnCreateInternal(Debug:bool = False):
+    """Generate a username based off of internal IP
+
+    Args:
+        Debug (bool, optional): _description_. Defaults to False.
+
+    Returns:
+        String: Username
+    """
+    if Debug: print("IpUnCreateInternal - Active")
+    if Debug: print("Debugging active")
+    
+    _ip = socket.gethostbyname(socket.gethostname())
+    
+    if Debug : print("IP get success") 
+    if Debug : print("IP = {}" .format(_ip))
+    _IpSplit = _ip.split(".")
+    
+    #Turn values into int
+    _V1 = int(_IpSplit[0])
+    _V2 = int(_IpSplit[1])
+    _V3 = int(_IpSplit[2])
+    _V4 = int(_IpSplit[3])
+    
+    #Turn value into names
+    _V1 = NameLibrary[_V1]
+    _V2 = NameLibrary[_V2]
+    _V3 = NameLibrary[_V3]
+    _V4 = NameLibrary[_V4]
+    
+    _IpUn = "{}-{}-{}-{}".format(_V1, _V2, _V3, _V4)
+    return _IpUn
+    
+    
+def IpUnCreateCustom(Debug:bool = False):
+    if Debug: print("IpUnCreateCustom - Active")
+
 
 # Function to decode username
 def IpUnDecode(Username:str, Debug:bool = False):
