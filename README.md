@@ -2,7 +2,7 @@
 
 Create a username with a python script.
 
-Version: 1.0
+Version: 1.1
 
 ## Updates
 
