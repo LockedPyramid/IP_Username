@@ -1087,9 +1087,28 @@ def IpUnCreateInternal(Debug:bool = False):
     return _IpUn
     
     
-def IpUnCreateCustom(Debug:bool = False):
-    if Debug: print("IpUnCreateCustom - Active")
-
+def IpUnCreateManual(_ip:str, Debug:bool = False):
+    if Debug: print("IpUnCreateManual - Active")
+    if Debug: print("Debugging active")
+     
+    if Debug : print("IP get success") 
+    if Debug : print("IP = {}" .format(_ip))
+    _IpSplit = _ip.split(".")
+    
+    #Turn values into int
+    _V1 = int(_IpSplit[0])
+    _V2 = int(_IpSplit[1])
+    _V3 = int(_IpSplit[2])
+    _V4 = int(_IpSplit[3])
+    
+    #Turn value into names
+    _V1 = NameLibrary[_V1]
+    _V2 = NameLibrary[_V2]
+    _V3 = NameLibrary[_V3]
+    _V4 = NameLibrary[_V4]
+    
+    _IpUn = "{}-{}-{}-{}".format(_V1, _V2, _V3, _V4)
+    return _IpUn
 
 # Function to decode username
 def IpUnDecode(Username:str, Debug:bool = False):
