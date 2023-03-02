@@ -23,8 +23,8 @@ Version: 1.1
 
 ## How to use
 
-1. Copy <span style="color:limegreen">IP_Username_Manager</span> into your project folder
-2. Import <span style="color:limegreen">IP_Username_Manager</span> into your script using <span style="color:aqua">from IP_Username_Manager import *</span>
+1. Copy ```IP_Username_Manager``` into your project folder
+2. Import ```IP_Username_Manager``` into your script using from ```IP_Username_Manager import *```
 3. Call a function
 
 Code examples are in the ```example.py``` script
